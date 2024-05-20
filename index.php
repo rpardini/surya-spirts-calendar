@@ -179,7 +179,7 @@ if (@strlen($_REQUEST['stage']) > 1) {
 
     <header>
         <div class="logo">
-            <img id="logo" src="<?= cacheBusterLink("img/logo.main.png") ?>" width="458" height="284"
+            <img id="logo" src="<?= cacheBusterLink("img/logo.main.png") ?>"
                  loading="eager"
                  alt="<?= getSiteTitle() ?>" <?= $autoEnableFluid ? "" : "onclick=\"startFluid()\" class=\"withPointerEvents\"" ?>/>
         </div>
