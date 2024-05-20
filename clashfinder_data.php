@@ -1,8 +1,8 @@
 <?php
 date_default_timezone_set('Europe/Amsterdam');
 
-define('CACHE_KEY', "clashfinder-expiring");
-define('CACHE_KEY_FALLBACK', "clashfinder-fallback");
+define('CACHE_KEY', "clashfinder-expiring2");
+define('CACHE_KEY_FALLBACK', "clashfinder-fallback2");
 
 function getClashFinderData()
 {
@@ -34,7 +34,7 @@ function getClashFinderData()
             if ($data = json_decode($data, true)) {
                 echo "Managed to decode JSON OK!...";
                 $serializedData = serialize($data);
-                $redis->setex(CACHE_KEY, 3600 / 2, $serializedData);
+                $redis->setex(CACHE_KEY, 60 * 5, $serializedData);
                 $redis->set(CACHE_KEY_FALLBACK, $serializedData);
             } else {
                 echo "Failed to decode JSON... using Fallback data...";
@@ -92,37 +92,3 @@ function parseClashFinderDate($str)
     $reformat = strftime("%d/%a[%H:%M]", $ts_start);
     return array('ts' => $ts_start, 'format' => $reformat);
 }
-
-
-/*
- * (
-            [ts_start] => Array
-                (
-                    [ts] => 1566979200
-                    [format] => 28/Wed[10:00]
-                    [obj] => DateTime Object
-                        (
-                            [date] => 2019-08-28 10:00:00.000000
-                            [timezone_type] => 3
-                            [timezone] => Europe/Berlin
-                        )
-
-                )
-
-            [ts_end] => Array
-                (
-                    [ts] => 1566982800
-                    [format] => 28/Wed[11:00]
-                    [obj] => DateTime Object
-                        (
-                            [date] => 2019-08-28 11:00:00.000000
-                            [timezone_type] => 3
-                            [timezone] => Europe/Berlin
-                        )
-
-                )
-
-            [what] => Traditional Zen Bows Sitting Meditation Practice - Sascha Bide, Electric Buddha
-            [where] => LECTURES
-        )
- */

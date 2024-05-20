@@ -1,5 +1,5 @@
 // Check compatibility for the browser we're running this in
-if (false) { // temp disable @TODO reenable when stable enough 
+if (true) { // temp disable @TODO reenable when stable enough 
     if ("serviceWorker" in navigator) {
         if (navigator.serviceWorker.controller) {
             console.log("[PWA Builder] active service worker found, no need to register");

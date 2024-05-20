@@ -161,7 +161,7 @@ if (@strlen($_REQUEST['stage']) > 1) {
                 sharePWA("<?=getSiteTitle()?>", "Check out this <?=getSiteTitle()?> app! 😍 Touch the logo and then drag for trippy visuals! ", "<?=$baseUrl?>")
             }
 
-            window.fakeTimeForNow = <?= (@!$_REQUEST['fake']) ? "null" : 1567189119 ?>;
+            window.fakeTimeForNow = <?= (@!$_REQUEST['fake']) ? "null" : time() + (60 * 60 * 24 * 4) ?>;
             window.serviceWorkerWithCacheBuster = "<?= cacheBusterLink("serviceworker.js")?>";
             window.fluidPatternFile = "<?= cacheBusterLink("fluid/LDR_LLL1_0.png")?>";
             window.autoStartFluid = <?=$autoEnableFluid ? "true" : "false"?>;
