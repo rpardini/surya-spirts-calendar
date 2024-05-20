@@ -1,0 +1,515 @@
+/* sanitize */
+*, ::after, ::before {
+    box-sizing: border-box
+}
+
+::after, ::before {
+    text-decoration: inherit;
+    vertical-align: inherit
+}
+
+html {
+    cursor: default;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    word-break: break-word
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+dl dl, dl ol, dl ul, ol dl, ul dl {
+    margin: 0
+}
+
+ol ol, ol ul, ul ol, ul ul {
+    margin: 0
+}
+
+hr {
+    height: 0;
+    overflow: visible
+}
+
+main {
+    display: block
+}
+
+nav ol, nav ul {
+    list-style: none;
+    padding: 0
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+abbr[title] {
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b, strong {
+    font-weight: bolder
+}
+
+code, kbd, samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle
+}
+
+audio, video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+iframe {
+    border-style: none
+}
+
+img {
+    border-style: none
+}
+
+svg:not([fill]) {
+    fill: currentColor
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+table {
+    border-collapse: collapse
+}
+
+button, input, select {
+    margin: 0
+}
+
+button {
+    overflow: visible;
+    text-transform: none
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button
+}
+
+fieldset {
+    border: 1px solid #a0a0a0;
+    padding: .35em .75em .625em
+}
+
+input {
+    overflow: visible
+}
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+select {
+    text-transform: none
+}
+
+textarea {
+    margin: 0;
+    overflow: auto;
+    resize: vertical
+}
+
+[type=checkbox], [type=radio] {
+    padding: 0
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .54
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+:-moz-ui-invalid {
+    box-shadow: none
+}
+
+details {
+    display: block
+}
+
+dialog {
+    background-color: #fff;
+    border: solid;
+    color: #000;
+    display: block;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content
+}
+
+dialog:not([open]) {
+    display: none
+}
+
+summary {
+    display: list-item
+}
+
+canvas {
+    display: inline-block
+}
+
+template {
+    display: none
+}
+
+[tabindex], a, area, button, input, label, select, summary, textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation
+}
+
+[hidden] {
+    display: none
+}
+
+[aria-busy=true] {
+    cursor: progress
+}
+
+[aria-controls] {
+    cursor: pointer
+}
+
+[aria-disabled=true], [disabled] {
+    cursor: not-allowed
+}
+
+[aria-hidden=false][hidden] {
+    display: initial
+}
+
+[aria-hidden=false][hidden]:not(:focus) {
+    clip: rect(0, 0, 0, 0);
+    position: absolute
+}
+
+@keyframes colorRotate {
+    100% {
+        -webkit-filter: hue-rotate(360deg);
+    }
+}
+
+/*--- starts here ---*/
+
+html {
+    /* padding: 0px 0.6em; */
+    font-family: 'Barlow', sans-serif;
+    background-color: #0c1d2d;
+    color: white;
+}
+
+body {
+    /* margin: 0 auto;
+    max-width: 600px; */
+    margin: 0;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+footer {
+    background-color: rgba(170, 202, 112, 1);
+    padding: 10px;
+    color: #0C1D2D;
+    text-align: right;
+    animation: colorRotate 30s linear infinite;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: #0C1D2D;
+}
+
+a {
+    color: #CCE4A0;
+    animation: colorRotate 30s linear infinite;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+h2, h3 {
+    pointer-events: all;
+    color: #CCE4A0;
+    animation: colorRotate 30s linear infinite;
+}
+
+h2 {
+    margin: 1rem 0;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    border-top: 1px dotted #CCE4A0;
+    border-bottom: 1px dotted #CCE4A0;
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 10px;
+    margin: 0;
+}
+
+/* tables */
+
+table {
+    width: 100%;
+}
+
+thead tr, th {
+    font-weight: bold;
+    animation: colorRotate 30s linear infinite;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-of-type(odd) {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+td, th {
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: left;
+}
+
+@media only screen and (max-width: 760px) {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td, th {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        padding-left: 30%;
+    }
+
+    .table--wide td, .table--wide th {
+        padding-left: 10px;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 10px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    td::before {
+        content: attr(data-before);
+        text-transform: uppercase;
+    }
+}
+
+/* def lists */
+
+dl:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+dt {
+    width: 25%;
+    text-transform: uppercase;
+}
+
+dd {
+    width: 75%;
+    margin: 0;
+}
+
+.dl--wide {
+    line-height: 2.5;
+}
+
+.dl--wide dt {
+    width: 45%;
+}
+
+.dl--wide dd {
+    width: 55%;
+}
+
+.withPointerEvents {
+    pointer-events: all;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 1rem;
+    animation: colorRotate 30s linear infinite;
+}
+
+.qrcode {
+    margin-top: 0.5em;
+}
+
+.container {
+    position: relative;
+    max-width: 876px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.weather {
+    position: relative;
+}
+
+.weather iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+}
+
+.button {
+    pointer-events: all;
+    border: 1px solid #CCE4A0;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    animation: colorRotate 30s linear infinite;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.button--weather {
+    position: absolute;
+    width: 90px;
+    right: 5px;
+    top: -65px;
+}
+
+.button--map {
+    position: absolute;
+    width: 110px;
+    right: 100px;
+    top: -65px;
+}
+
+.color-rotate {
+    color: #CCE4A0;
+    animation: colorRotate 30s linear infinite;
+}
+
+.beginIn {
+    font-style: italic;
+    color: silver;
+}
+
+/* sections and footer actually dont trigger the effect. in practice only logo does */
+.container {
+    pointer-events: all;
+}
+
+img {
+    image-rendering: high-quality;
+    max-width: 100%;
+}
+
+canvas {
+    pointer-events: all;
+    z-index: -2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    user-select: none;
+}
