@@ -313,7 +313,8 @@ if (@strlen($_REQUEST['stage']) > 1) {
         </div>
     </section>
 
-    <!--    <section id="sharing">
+    <!--
+    <section id="sharing">
         <h2>
             <div class="container">Share with your friends</div>
         </h2>
@@ -326,15 +327,15 @@ if (@strlen($_REQUEST['stage']) > 1) {
     /*            }
                 */ ?>
         </div>
-    </section>
--->
+    </section> 
+    -->
     <!-- <section id="single">
         <h2><div class="container">All-stages calendar</div></h2>
 
         <div class="container">
             <?php
-    $url = "{$baseUrl}?stage=" . urlencode("ALL");
-    ?>
+              $url = "{$baseUrl}?stage=" . urlencode("ALL");
+            ?>
             <p>Also, there's this version with all stages in a single calendar: <a href="<?php echo $url ?>">All stages
                     (bit confusing)</a>.</p>
             <?php showInstallButton($showInstallButtonLater); ?>
@@ -344,7 +345,10 @@ if (@strlen($_REQUEST['stage']) > 1) {
 
     <footer>
         <div class="container">
-            <div>made with 💚 by <a href="mailto:ricardo@pardini.net">rpardini</a> & <a href="mailto:dine@dine.tk">dine</a>💚️
+            <div>
+                made with 💚 by 
+                <a href="https://github.com/rpardini/" target="_blank">rpardini</a> &
+                <a href="https://github.com/dine/" target="_blank">dine</a>💚️
             </div>
             <div>fluid simulation by <a href="https://github.com/PavelDoGreat">PavelDoGreat</a></div>
         </div>
