@@ -1,9 +1,13 @@
 name: main-latest
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   push:
     branches: [ 'main' ] # Run on pushes to main branch
+
+permissions:
+  contents: write
+  packages: write
 
 env:
   # This image's versions, image will be tagged with the combinations (:MAJOR, :MAJOR.MINOR, :MAJOR.MINOR
