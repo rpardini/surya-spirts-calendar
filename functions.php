@@ -8,13 +8,13 @@ function scriptTagWithInlineScript($scriptFile)
 function getSiteTitle()
 {
     if ($_SERVER['HTTP_HOST'] === "surya-spirits.helaaspindakaas.xyz") {
-        return "Surya Spirits 2024 Ghent";
+        return "Surya Spirits 2025 Ghent";
     }
-    return "Surya Spirits 2024 Ghent DEV";
+    return "Surya Spirits 2025 Ghent DEV";
 }
 
 function getClashfinderID() {
-    return "suryaspirits2024ghent";
+    return "suryaspirits2025";
 }
 
 function data_uri($file, $mime)
