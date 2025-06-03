@@ -13,7 +13,7 @@ $viewPort = $isMobile ? "width=device-width, user-scalable=no, initial-scale=1.0
 
 $baseProto = $_SERVER['HTTP_HOST'] == "localhost" ? "http" : "https";
 $baseUrl = $baseProto . "://" . $_SERVER['HTTP_HOST'] . "/";
-$autoEnableFluid = false; //!$isMobile;
+$autoEnableFluid = true;
 $enableExternalFont = true;
 
 require('clashfinder_data.php');

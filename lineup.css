@@ -2,10 +2,12 @@
  * GRID SCHEDULE LAYOUT
  *************************/
 
+/* nada, deixa aparecer tudo duma vez
 .too_high {
     max-height: 55vh;
     overflow: auto;
 }
+*/
 
 .too_high::-webkit-scrollbar {
     width: 0 !important
