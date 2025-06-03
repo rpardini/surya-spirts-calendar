@@ -196,7 +196,7 @@ if (@strlen($_REQUEST['stage']) > 1) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.runtime.min.js"></script>
         <script type="text/javascript">
             async function share() {
-                sharePWA("<?=getSiteTitle()?>", "Check out this <?=getSiteTitle()?> app! 😍 Touch the logo and then drag for trippy visuals! ", "<?=$baseUrl?>")
+                sharePWA("<?=getSiteTitle()?>", "Check out this <?=getSiteTitle()?> app!", "<?=$baseUrl?>")
             }
 
             window.fakeTimeForNow = <?= (@!$_REQUEST['fake']) ? "null" : time() + (60 * 60 * 24 * 4) ?>;
